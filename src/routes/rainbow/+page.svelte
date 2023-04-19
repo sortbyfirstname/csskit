@@ -33,7 +33,7 @@
 	<div class="divider divider-horizontal hidden sm:flex" />
 	<div class="divider divider-vertical flex sm:hidden" />
 
-	<div class="h-3/4 w-1/3 flex-grow flex flex-col justify-between space-y-5">
+	<div class="h-3/4 w-3/4 sm:w-1/3 flex-grow flex flex-col justify-between space-y-5">
 		<div class="h-full w-full flex-grow">
 			<div class="w-full grid grid-cols-4 sm:grid-cols-12 gap-x-4 sm:-mt-4">
 				{#if colors}
