@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .icon {
+        @apply mask-no-repeat;
+    }
+
+    .icon-primary {
+        @apply icon bg-primary;
+    }
+}

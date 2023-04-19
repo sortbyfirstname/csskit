@@ -22,11 +22,11 @@
 	<title>Rainbow | CSSkit</title>
 </svelte:head>
 
-<div class="z-10 h-full w-full flex flex-col md:flex-row p-10 sm:p-20">
+<div class="z-10 h-full w-full flex flex-col md:flex-row px-10 py-16 sm:p-20">
 	<div class="card h-fit flex flex-col items-center bg-base-300 space-y-4 p-5 md:px-7 lg:px-10 sm:mr-4 sm:my-4">
 		<div class="flex flex-col items-center space-y-3">
 			<div class="flex justify-center">
-				<img class="h-20" src="rainbow.svg" alt="Rainbow logo" />
+				<div class="h-20 w-60 icon-primary icon-[rainbow]" />
 			</div>
 			<div class="w-[19.4rem]">
 				<div class="chat chat-start">
