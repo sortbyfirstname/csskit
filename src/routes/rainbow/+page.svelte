@@ -26,7 +26,7 @@
 	<div class="card h-fit flex flex-col items-center bg-base-300 space-y-4 p-5 md:px-7 lg:px-10 sm:mr-4 sm:my-4">
 		<div class="flex flex-col items-center space-y-3">
 			<div class="flex justify-center">
-				<div class="h-20 w-60 icon-primary icon-[rainbow]" />
+				<div class="h-20 w-60 icon-rainbow" />
 			</div>
 			<div class="w-[19.4rem]">
 				<div class="chat chat-start">

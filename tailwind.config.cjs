@@ -13,20 +13,19 @@ module.exports = {
 	},
 	plugins: [
 		daisyui,
-		plugin(function ({ addUtilities, matchUtilities, theme }) {
+		plugin(function ({ addUtilities }) {
 			addUtilities({
-				'.mask-no-repeat': {
-					'mask-repeat': 'no-repeat'
+				'.icon-csskit': {
+					'mask-image': 'url(csskit.svg)',
+					'mask-repeat': 'no-repeat',
+					'background-color': 'hsl(var(--p))'
+				},
+				'.icon-rainbow': {
+					'mask-image': 'url(rainbow.svg)',
+					'mask-repeat': 'no-repeat',
+					'background-color': 'hsl(var(--p))'
 				}
 			});
-			matchUtilities(
-				{
-					icon: (value) => ({
-						'mask-image': `url(./${value}.svg)`
-					})
-				},
-				{ values: theme('icon') }
-			);
 		})
 	]
 };
