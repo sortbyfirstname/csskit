@@ -7,7 +7,7 @@
 <input
 	type="file"
 	accept="text/css"
-	class="file-input w-[7.5rem] md:w-fit"
+	class="file-input w-fit"
 	bind:files
 	on:change
 	on:input={() => (disabled = true)}

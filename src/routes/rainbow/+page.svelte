@@ -22,7 +22,7 @@
 	<title>Rainbow | CSSkit</title>
 </svelte:head>
 
-<div class="z-10 h-full w-full flex flex-row justify-between place-items-center p-20">
+<div class="z-10 h-full w-full flex flex-col sm:flex-row justify-between place-items-center p-20">
 	<div class="z-10 h-3/4 card bg-base-300 place-items-center place-content-center space-y-4 px-5 md:px-7 lg:px-10 mr-4">
 		<FileInput bind:files on:change={loadStylesheet} />
 		{#each stylesheets as _}
@@ -30,7 +30,8 @@
 		{/each}
 	</div>
 
-	<div class="divider divider-horizontal" />
+	<div class="divider divider-horizontal hidden sm:flex" />
+	<div class="divider divider-vertical flex sm:hidden" />
 
 	<div class="h-3/4 w-1/3 flex-grow flex flex-col justify-between space-y-5">
 		<div class="h-full w-full flex-grow">
