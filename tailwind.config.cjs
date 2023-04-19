@@ -4,7 +4,11 @@ const daisyui = require('daisyui');
 module.exports = {
 	content: ['./src/**/*.{html,js,svelte}'],
 	theme: {
-		extend: {}
+		extend: {
+			screens: {
+				'3xl': '1900px'
+			}
+		}
 	},
 	plugins: [daisyui]
 };
