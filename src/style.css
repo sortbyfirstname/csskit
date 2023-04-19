@@ -8,6 +8,6 @@
     }
 
     .icon-primary {
-        @apply icon bg-primary;
+        @apply icon bg-primary-content;
     }
 }
