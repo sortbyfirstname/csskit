@@ -1,3 +1,7 @@
-<div class="absolute top-0 left-0 right-0 flex flex-row justify-between items-center">
-	<img class="h-10 w-10 m-4" src="csskit.svg" />
+<script>
+	import { goto } from '$app/navigation';
+</script>
+
+<div class="z-50 absolute top-0 left-0 right-0 flex flex-row justify-between items-center">
+	<button class="h-12 w-12 mx-3 mt-2 icon-csskit" on:click={() => goto('/')} />
 </div>
