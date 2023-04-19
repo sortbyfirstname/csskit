@@ -38,7 +38,7 @@
 			<div class="w-full grid grid-cols-4 sm:grid-cols-12 gap-x-1 sm:gap-x-4 sm:-mt-4">
 				{#if colors}
 					{#each [...new Set(colors.map((c) => c.value))].sort() as color}
-						<div class="h-10 sm:h-24 w-10 sm:w-24 rounded-full shadow-lg m-1 sm:m-4" style={'background-color: ' + color} title={color} />
+						<div class="h-12 sm:h-24 w-12 sm:w-24 rounded-full shadow-lg m-1 sm:m-4" style={'background-color: ' + color} title={color} />
 					{/each}
 				{/if}
 			</div>
