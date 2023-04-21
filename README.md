@@ -1,14 +1,14 @@
-<div style="display:flex; justify-content:center;" >
+<p align="center">
     <img src="https://www.csskit.dev/csskit.svg" height="250" />
-</div>
+</p>
 
 CSSKit is a toolbox for stylesheets. The purpose of this is to provide ways to get manipulate and visualise parts of your CSS. This has been built very much from the perspective of a having a lot of large, legacy stylesheets. The project is a work in progress and very early in development, the existing tools will be extended and new tools will be added, as well as general improvements made to the site as and when I get time.
 
 <br/>
 
-<div style="display:flex; justify-content:center;" >
+<p align="center" >
     <img src="https://www.csskit.dev/rainbow.svg" height="50" />
-</div>
+</p>
 
 ## [Beta] Rainbow
 
