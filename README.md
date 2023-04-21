@@ -1,5 +1,9 @@
 <p align="center">
-    <img src="https://www.csskit.dev/csskit.svg" height="250" />
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://www.csskit.dev/csskit-white.svg">
+        <source media="(prefers-color-scheme: light)" srcset="https://www.csskit.dev/csskit.svg">
+        <img alt="CSSkit logo" src="https://www.csskit.dev/csskit.svg" height="250">
+    </picture>
 </p>
 
 CSSKit is a toolbox for stylesheets. The purpose of this is to provide ways to get manipulate and visualise parts of your CSS. This has been built very much from the perspective of a having a lot of large, legacy stylesheets. The project is a work in progress and very early in development, the existing tools will be extended and new tools will be added, as well as general improvements made to the site as and when I get time.
@@ -7,7 +11,11 @@ CSSKit is a toolbox for stylesheets. The purpose of this is to provide ways to g
 <br/>
 
 <p align="center" >
-    <img src="https://www.csskit.dev/rainbow.svg" height="50" />
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://www.csskit.dev/rainbow-white.svg">
+        <source media="(prefers-color-scheme: light)" srcset="https://www.csskit.dev/rainbow.svg">
+        <img alt="CSSkit logo" src="https://www.csskit.dev/rainbow.svg" height="50">
+    </picture>
 </p>
 
 ## [Beta] Rainbow
