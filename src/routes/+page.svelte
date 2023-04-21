@@ -2,6 +2,10 @@
 	import { goto } from '$app/navigation';
 </script>
 
+<svelte:head>
+	<title>CSSkit</title>
+</svelte:head>
+
 <div class="absolute top-3 md:top-5 xl:top-10 left-0 right-0 flex flex-row justify-center items-center max-h-[30vh]">
 	<div class="h-40 md:h-52 xl:h-60 w-40 md:w-52 xl:w-60 icon-csskit bg-center" />
 </div>
