@@ -1,18 +1,34 @@
-# create-svelte
+<div style="display:flex; justify-content:center;" >
+    <img src="https://www.csskit.dev/csskit.svg" height="250" />
+</div>
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+CSSKit is a toolbox for stylesheets. The purpose of this is to provide ways to get manipulate and visualise parts of your CSS. This has been built very much from the perspective of a having a lot of large, legacy stylesheets. The project is a work in progress and very early in development, the existing tools will be extended and new tools will be added, as well as general improvements made to the site as and when I get time.
 
-## Creating a project
+<br/>
 
-If you're seeing this, you've probably already done this step. Congrats!
+<div style="display:flex; justify-content:center;" >
+    <img src="https://www.csskit.dev/rainbow.svg" height="50" />
+</div>
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## [Beta] Rainbow
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+Rainbow takes all the colours (Hex, RGB and HSL) from your uploaded stylesheets and present them as dots on the screen. This is useful to visualise your "colour stack" and have an easy way to share it with interested parties.
+
+### Ideas for future development:
+
+- Extend validation on colours
+- Support more colour types (eg. named colours)
+- Support alpha channels on colours
+- Add the ability to download a visualisation of the colours (PDF or image)
+- Add the ability to change how the colours are visualised, maybe as a rainbow for starters
+
+## [Coming soon] Propper
+
+Propper will be able to replace all the colours found in your CSS with custom properties (aka CSS variables), present you with an editable list of the custom properties, and then allow you to download your CSS with the replaced custom properties and your new stylesheet containing your custom properties.
+
+This is to provide an easy way to manage colours across a large number of stylesheets, and extend how you need to going.
+
+---
 
 ## Developing
 
