@@ -11,13 +11,15 @@
 </div>
 
 <div class="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-8 mt-20">
+	<button class="btn btn-primary btn-lg" on:click={() => goto('/tool/coco')}>CoCo</button>
 	<div class="relative tooltip select-none" data-tip="Propper">
-		<div class="absolute -rotate-12 left-1 top-5 bg-teal-400 text-white font-mono whitespace-nowrap px-3">
+		<div class="w-full absolute -rotate-12 top-1/3 bg-teal-400 text-white font-mono whitespace-nowrap px-3">
 			COMING SOON
 		</div>
-		<button class="btn btn-primary btn-lg" on:click={() => goto('/propper')} disabled>Propper</button>
+		<button class="btn btn-primary btn-lg" on:click={() => goto('/tool/propper')} disabled>Propper</button>
 	</div>
-	<button class="btn btn-primary btn-lg" on:click={() => goto('/rainbow')}>Rainbow</button>
+
+	<button class="btn btn-primary btn-lg" on:click={() => goto('/tool/rainbow')}>Rainbow</button>
 </div>
 
 <div class="absolute bottom-0 left-0 right-0 flex flex-row justify-center items-center">

@@ -1,4 +1,5 @@
 {
+    "semi": true,
 	"svelteBracketNewLine": false,
     "jsxSingleQuote": true,
 	"useTabs": true,

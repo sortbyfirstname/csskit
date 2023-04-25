@@ -20,6 +20,11 @@ module.exports = {
 					'mask-repeat': 'no-repeat',
 					'background-color': 'hsl(var(--p))'
 				},
+				'.icon-coco': {
+					'mask-image': 'url(/coco.svg)',
+					'mask-repeat': 'no-repeat',
+					'background-color': 'hsl(var(--p))'
+				},
 				'.icon-rainbow': {
 					'mask-image': 'url(/rainbow.svg)',
 					'mask-repeat': 'no-repeat',

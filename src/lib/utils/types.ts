@@ -1,22 +1,19 @@
 export type Attribute = {
-    name: string;
-    value: string;
-}
-
-export type ColorType = 'hex' | 'rgb' | 'hsl';
-
-export type Color = {
-    type: ColorType;
-    value: string;
-}
+	name: string;
+	value: string | string[];
+};
 
 export type Rule = {
-    selector: string;
-    attributes: Attribute[];
-    colors: Color[];
-}
+	selector: string;
+	attributes: Attribute[];
+};
+
+export type StylesheetContent = {
+	rules: Rule[];
+	comments: string[];
+};
 
 export type Stylesheet = {
-    name: string;
-    rules: Rule[];
-}
+	name: string;
+	content: StylesheetContent;
+};

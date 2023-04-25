@@ -7,7 +7,7 @@
 <input
 	type="file"
 	accept="text/css"
-	class="file-input border-none w-fit shrink-0"
+	class="file-input file-input-xs sm:file-input-sm md:file-input-md w-fit shrink-0"
 	bind:files
 	on:change
 	on:input={() => (disabled = true)}

@@ -1,21 +1,9 @@
 <script lang="ts">
-	import FileInput from '$lib/components/FileInput.svelte';
-	import { colorsOnly, processStylesheet } from '$lib/utils/text';
-	import type { Color, Rule, Stylesheet } from '$lib/utils/types';
+	import StylesheetInput from '$lib/components/StylesheetInput.svelte';
+	import type { Stylesheet } from '$lib/utils/types';
+	import { getColors } from '$lib/utils/parsers';
 
-	let files: FileList;
-	let stylesheets: Stylesheet[] = [];
-	let colors: Color[] = [];
-
-	export const loadStylesheet = async (e: Event) => {
-		const file = await files[0];
-		const { name, data } = { name: file.name, data: await file.text() };
-		const rules: Rule[] = processStylesheet(data);
-
-		stylesheets = [...stylesheets, { name, rules }];
-
-		colors = [...colors, ...colorsOnly(stylesheets)];
-	};
+	let stylesheets: Stylesheet[];
 </script>
 
 <svelte:head>
@@ -39,11 +27,7 @@
 				</div>
 			</div>
 		</div>
-
-		<FileInput bind:files on:change={loadStylesheet} />
-		{#each stylesheets as _}
-			<FileInput bind:files on:change={loadStylesheet} />
-		{/each}
+		<StylesheetInput bind:stylesheets />
 	</div>
 
 	<div class="divider divider-horizontal hidden md:flex md:mr-4" />
@@ -53,13 +37,13 @@
 		<div class="h-full w-full flex-grow">
 			<div
 				class="w-full grid grid-cols-4 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10 3xl:grid-cols-12 gap-x-1 sm:gap-x-4">
-				{#if colors}
-					{#each [...new Set(colors.map((c) => c.value))].sort() as color}
+				{#if stylesheets}
+					{#each getColors(stylesheets) as color}
 						<div class="h-full w-full flex justify-center items-center">
 							<div
 								class="h-12 sm:h-16 xl:h-24 w-12 sm:w-16 xl:w-24 rounded-full shadow-lg m-1 sm:m-4 shrink-0"
-								style={'background-color: ' + color}
-								title={color} />
+								style={'background-color: ' + color.original}
+								title={color.original} />
 						</div>
 					{/each}
 				{/if}
