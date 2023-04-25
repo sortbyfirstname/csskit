@@ -11,12 +11,12 @@
 </svelte:head>
 
 <div class="z-10 h-full w-full flex flex-col md:flex-row px-10 py-16 sm:p-20">
-	<div class="card h-fit flex flex-col items-center bg-base-300 space-y-4 p-5 md:px-7 lg:px-10 sm:mr-4">
+	<div class="card h-fit flex flex-col items-center bg-base-300 space-y-4 p-5 md:px-7 lg:px-10">
 		<div class="flex flex-col items-center space-y-3">
 			<div class="flex justify-center">
 				<div class="h-20 w-60 icon-coco" />
 			</div>
-			<div class="w-[19.4rem]">
+			<div class="w-60 sm:w-[19.4rem] text-sm sm:text-base">
 				<div class="chat chat-start">
 					<div class="chat-bubble w-52">CoCo is a tool that gets you all comments found in your stylesheets.</div>
 				</div>

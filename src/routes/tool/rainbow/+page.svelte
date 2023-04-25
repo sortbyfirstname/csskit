@@ -16,7 +16,7 @@
 			<div class="flex justify-center">
 				<div class="h-20 w-60 icon-rainbow" />
 			</div>
-			<div class="w-[19.4rem]">
+			<div class="w-60 sm:w-[19.4rem] text-sm sm:text-base">
 				<div class="chat chat-start">
 					<div class="chat-bubble w-52">
 						Rainbow is a tool to help you gain clarity in the colours used across your stylesheets.
