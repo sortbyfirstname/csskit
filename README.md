@@ -1,8 +1,8 @@
 <p align="center">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://www.csskit.dev/csskit-white.svg">
-        <source media="(prefers-color-scheme: light)" srcset="https://www.csskit.dev/csskit.svg">
-        <img alt="CSSkit logo" src="https://www.csskit.dev/csskit.svg" height="250">
+        <source media="(prefers-color-scheme: dark)" srcset="static/csskit-white.svg">
+        <source media="(prefers-color-scheme: light)" srcset="static/csskit.svg">
+        <img alt="CSSkit logo" src="static/csskit.svg" height="250">
     </picture>
 </p>
 
@@ -12,9 +12,9 @@ CSSKit is a toolbox for stylesheets. The purpose of this is to provide ways to g
 
 <p align="center" >
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://www.csskit.dev/rainbow-white.svg">
-        <source media="(prefers-color-scheme: light)" srcset="https://www.csskit.dev/rainbow.svg">
-        <img alt="CSSkit logo" src="https://www.csskit.dev/rainbow.svg" height="50">
+        <source media="(prefers-color-scheme: dark)" srcset="static/rainbow-white.svg">
+        <source media="(prefers-color-scheme: light)" srcset="static/rainbow.svg">
+        <img alt="CSSkit logo" src="static/rainbow.svg" height="50">
     </picture>
 </p>
 
