@@ -24,17 +24,87 @@ Rainbow takes all the colours (Hex, RGB and HSL) from your uploaded stylesheets 
 
 ### Ideas for future development:
 
-- Extend validation on colours
-- Support more colour types (eg. named colours)
-- Support alpha channels on colours
+- ~~Extend validation on colours~~ | Done
+- Support named colours
+- ~~Support alpha channels on colours~~ | Done
 - Add the ability to download a visualisation of the colours (PDF or image)
 - Add the ability to change how the colours are visualised, maybe as a rainbow for starters
+
+<br/>
+
+<p align="center" >
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="static/coco-white.svg">
+        <source media="(prefers-color-scheme: light)" srcset="static/coco.svg">
+        <img alt="CSSkit logo" src="static/coco.svg" height="50">
+    </picture>
+</p>
+
+## CoCo - Contextless Comments
+
+CoCo is a very simple tool the extracts and displays all comments found in your stylesheets, with a total count. The comments are displayed without any context in regards to where they are in the stylesheet, hence the name. This tool was only created as a side effect of creating the comment parser really, but hey, someone may find it useful.
 
 ## [Coming soon] Propper
 
 Propper will be able to replace all the colours found in your CSS with custom properties (aka CSS variables), present you with an editable list of the custom properties, and then allow you to download your CSS with the replaced custom properties and your new stylesheet containing your custom properties.
 
 This is to provide an easy way to manage colours across a large number of stylesheets, and extend how you need to going.
+
+---
+
+## Technologies used
+
+<p align="center" >
+    <a href="https://github.com/sveltejs/svelte">
+        <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="static/ext/svelte-logo-text-white.svg">
+            <source media="(prefers-color-scheme: light)" srcset="static/ext/svelte-logo-text.svg">
+            <img alt="Svelte logo" src="static/svelte-logo-text.svg" height="50">
+        </picture>
+    </a>
+    <br/>
+    <a href="https://github.com/microsoft/TypeScript">
+        <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="static/ext/typescript-logo-text-white.svg">
+            <source media="(prefers-color-scheme: light)" srcset="static/ext/typescript-logo-text.svg">
+            <img alt="TypeScript logo" src="static/typescript-logo-text.svg" height="50">
+        </picture>
+    </a>
+    <br/>
+    <a href="https://github.com/colinhacks/zod">
+        <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="static/ext/zod-logo-text-white.svg">
+            <source media="(prefers-color-scheme: light)" srcset="static/ext/zod-logo-text.svg">
+            <img alt="Zod logo" src="static/zod-logo-text.svg" height="50">
+        </picture>
+    </a>
+    <br/>
+    <a href="https://github.com/tailwindlabs/tailwindcss">
+        <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="static/ext/tailwindcss-logo-text-white.svg">
+            <source media="(prefers-color-scheme: light)" srcset="static/ext/tailwindcss-logo-text.svg">
+            <img alt="TailwindCSS logo" src="static/tailwindcss-logo-text.svg" height="50">
+        </picture>
+    </a>
+    <br/>
+    <a href="https://github.com/saadeghi/daisyui">
+        <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="static/ext/daisyui-logo-text-white.svg">
+            <source media="(prefers-color-scheme: light)" srcset="static/ext/daisyui-logo-text.svg">
+            <img alt="DaisyUI logo" src="static/daisyui-logo-text.svg" height="50">
+        </picture>
+    </a>
+    <br/>
+    <a href="https://github.com/vitejs/vite">
+        <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="static/ext/vite-logo-text-white.svg">
+            <source media="(prefers-color-scheme: light)" srcset="static/ext/vite-logo-text.svg">
+            <img alt="Vite logo" src="static/vite-logo-text.svg" height="50">
+        </picture>
+    </a>
+</p>
+
+This project also uses [ColorTranslator](https://github.com/elchininet/ColorTranslator) to convert parsed colours to HSL for effective deduping.
 
 ---
 
