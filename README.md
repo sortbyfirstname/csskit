@@ -22,14 +22,6 @@ CSSKit is a toolbox for stylesheets. The purpose of this is to provide ways to g
 
 Rainbow takes all the colours (Hex, RGB and HSL) from your uploaded stylesheets and present them as dots on the screen. This is useful to visualise your "colour stack" and have an easy way to share it with interested parties.
 
-### Ideas for future development:
-
-- ~~Extend validation on colours~~ | Done
-- Support named colours
-- ~~Support alpha channels on colours~~ | Done
-- Add the ability to download a visualisation of the colours (PDF or image)
-- Add the ability to change how the colours are visualised, maybe as a rainbow for starters
-
 <br/>
 
 <p align="center" >
