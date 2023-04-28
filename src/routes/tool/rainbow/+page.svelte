@@ -41,9 +41,9 @@
 					{#each getColors(stylesheets) as color}
 						<div class="h-full w-full flex justify-center items-center">
 							<div
-								class="h-12 sm:h-16 xl:h-24 w-12 sm:w-16 xl:w-24 rounded-full shadow-lg m-1 sm:m-4 shrink-0"
+								class="h-12 sm:h-16 xl:h-24 w-12 sm:w-16 xl:w-24 rounded-full shadow-lg m-1 sm:m-4 shrink-0 tooltip tooltip-primary tooltip-top"
 								style={'background-color: ' + color.original}
-								title={color.original} />
+								data-tip={color.original} />
 						</div>
 					{/each}
 				{/if}
