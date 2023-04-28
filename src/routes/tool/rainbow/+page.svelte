@@ -1,7 +1,7 @@
 <script lang="ts">
 	import StylesheetInput from '$lib/components/StylesheetInput.svelte';
 	import type { Stylesheet } from '$lib/utils/types';
-	import { getColors } from '$lib/utils/parsers';
+	import { getColors } from '$lib/utils/transformers';
 
 	let stylesheets: Stylesheet[];
 </script>

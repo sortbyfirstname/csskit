@@ -1,5 +1,4 @@
 import { z } from 'zod';
-import { ColorTranslator } from 'colortranslator';
 import {
 	regex,
 	remove,
@@ -10,7 +9,7 @@ import {
 	textBefore,
 	textBeforeLast
 } from './text';
-import type { Stylesheet } from './types';
+import { namedColors } from './values/named-colors';
 
 const hex = z.string().trim().toLowerCase().regex(regex.hex);
 
@@ -67,6 +66,8 @@ const hsla = z
 	.pipe(hslaValues)
 	.transform((hsla) => `hsla(${hsla.hue}, ${hsla.saturation}%, ${hsla.lightness}%, ${hsla.alpha})`);
 
+const named = z.string().trim().toLowerCase().refine(val => namedColors.includes(val));
+
 const rgbDeclaration = z.string().trim().toLowerCase().startsWith('rgb(').endsWith(')');
 
 const rgbaDeclaration = z.string().trim().toLowerCase().startsWith('rgba(').endsWith(')');
@@ -108,7 +109,7 @@ const rgba = z
 	.pipe(rgbaValues)
 	.transform((rgba) => `rgba(${rgba.red}, ${rgba.green}, ${rgba.blue}, ${rgba.alpha})`);
 
-const color = z.union([hex, hsl, hsla, rgb, rgba]);
+export const color = z.union([hex, hsl, hsla, named, rgb, rgba]);
 
 const attributeObject = z.object({
 	name: z.string(),
@@ -155,11 +156,3 @@ export const stylesheet = z.object({
 	name: z.string().endsWith('.css', { message: 'Only CSS files are supported' }),
 	content: stylesheetContent
 });
-
-export const getColors = (stylesheets: Stylesheet[]) =>
-	stylesheets
-		.flatMap((s) => s.content.rules.flatMap((r) => r.attributes.flatMap((a) => a.value)))
-		.filter((att) => color.safeParse(att).success)
-		.map((c) => ({ original: c, converted: ColorTranslator.toHSL(c) }))
-		.filter((val, i, arr) => arr.findIndex((val2) => val2.converted === val.converted) === i)
-		.sort((a, b) => (a.converted < b.converted ? -1 : 1));
