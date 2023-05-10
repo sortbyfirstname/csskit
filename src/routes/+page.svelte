@@ -11,15 +11,22 @@
 </div>
 
 <div class="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-8 mt-20">
-	<button class="btn btn-primary btn-lg" on:click={() => goto('/tool/coco')}>CoCo</button>
-	<div class="relative tooltip select-none" data-tip="Propper">
-		<div class="w-full absolute -rotate-12 top-1/3 bg-teal-400 text-white font-mono whitespace-nowrap px-3">
-			COMING SOON
-		</div>
+	<div class="tooltip" data-tip="get comments from your stylesheets">
+		<button class="btn btn-primary btn-lg" on:click={() => goto('/tool/coco')}>CoCo</button>
+	</div>
+
+	<div class="relative tooltip select-none" data-tip="wrap your colours in custom properties">
+		<div class="w-full absolute -rotate-12 top-1/3 bg-teal-400 text-white font-mono whitespace-nowrap px-3">COMING SOON</div>
 		<button class="btn btn-primary btn-lg" on:click={() => goto('/tool/propper')} disabled>Propper</button>
 	</div>
 
-	<button class="btn btn-primary btn-lg" on:click={() => goto('/tool/rainbow')}>Rainbow</button>
+	<div class="tooltip" data-tip="visualise the colours in your stylesheets">
+		<button class="btn btn-primary btn-lg" on:click={() => goto('/tool/rainbow')}>Rainbow</button>
+	</div>
+
+	<div class="tooltip" data-tip="convert your pixels and points to rems">
+		<button class="btn btn-primary btn-lg" on:click={() => goto('/tool/remmy')}>Remmy</button>
+	</div>
 </div>
 
 <div class="absolute bottom-0 left-0 right-0 flex flex-row justify-center items-center">

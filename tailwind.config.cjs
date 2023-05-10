@@ -29,6 +29,11 @@ module.exports = {
 					'mask-image': 'url(/rainbow.svg)',
 					'mask-repeat': 'no-repeat',
 					'background-color': 'hsl(var(--p))'
+				},
+				'.icon-remmy': {
+					'mask-image': 'url(/remmy.svg)',
+					'mask-repeat': 'no-repeat',
+					'background-color': 'hsl(var(--p))'
 				}
 			});
 		})

@@ -18,9 +18,7 @@
 			</div>
 			<div class="w-60 sm:w-[19.4rem] text-sm sm:text-base">
 				<div class="chat chat-start">
-					<div class="chat-bubble w-52">
-						Rainbow is a tool to help you gain clarity in the colours used across your stylesheets.
-					</div>
+					<div class="chat-bubble w-52">Rainbow is a tool to help you gain clarity in the colours used across your stylesheets.</div>
 				</div>
 				<div class="chat chat-end">
 					<div class="chat-bubble w-52">Upload your CSS files to visualise your colour palette.</div>
@@ -35,8 +33,7 @@
 
 	<div class="h-3/4 w-full md:w-1/3 flex-grow flex flex-col justify-between space-y-5">
 		<div class="h-full w-full flex-grow">
-			<div
-				class="w-full grid grid-cols-4 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10 3xl:grid-cols-12 gap-x-1 sm:gap-x-4">
+			<div class="w-full grid grid-cols-4 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10 3xl:grid-cols-12 gap-x-1 sm:gap-x-4">
 				{#if stylesheets}
 					{#each getColors(stylesheets) as color}
 						<div class="h-full w-full flex justify-center items-center">

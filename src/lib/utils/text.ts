@@ -3,10 +3,20 @@ export const regex = {
 	byEmptyLines: /\n\s*\n/,
 	byLine: /\r?\n|\r|\n/g,
 	hex: /^#(?:[0-9a-fA-F]{2}){3,4}$/,
+	pixel: /^\d+px$/,
+	point: /^\d+pt$/,
 	semicolon: /;(?!.*[)"])/
 };
 
 export const appendIfNone = (str: string, append: string) => `${str.endsWith(append) ? str : str + append}`;
+
+export const replaceMany = (str: string, find: string[], replace: string[]) => {
+	var replaceString = str;
+	for (var i = 0; i < find.length; i++) {
+		replaceString = replaceString.replace(find[i], replace[i]);
+	}
+	return replaceString;
+};
 
 export const remove = (str: string, value: string) => str.replace(value, '');
 
@@ -41,6 +51,4 @@ export const textBefore = (str: string, before: string, inclusive: boolean = fal
 	inclusive ? str.substring(0, str.indexOf(before)).trim() + before : str.substring(0, str.indexOf(before)).trim();
 
 export const textBeforeLast = (str: string, before: string, inclusive: boolean = false) =>
-	inclusive
-		? str.substring(0, str.lastIndexOf(before)).trim() + before
-		: str.substring(0, str.lastIndexOf(before)).trim();
+	inclusive ? str.substring(0, str.lastIndexOf(before)).trim() + before : str.substring(0, str.lastIndexOf(before)).trim();
