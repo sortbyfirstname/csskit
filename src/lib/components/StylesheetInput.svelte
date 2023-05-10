@@ -10,7 +10,6 @@
 		const file = files[0];
 		const { name, data } = { name: file.name, data: await file.text() };
 		const res = stylesheet.safeParse({ name, content: data, raw: data });
-		res.success ? console.log(res) : console.log(res.error);
 		if (res.success) stylesheets = [...stylesheets, { name: res.data.name, content: res.data.content, raw: res.data.raw }];
 	};
 </script>
