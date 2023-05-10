@@ -4,6 +4,7 @@ export type Converted<T> = {
 };
 
 export type Size = {
+	raw: string;
 	value: number;
 	unit: string;
 };

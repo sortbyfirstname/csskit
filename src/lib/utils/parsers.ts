@@ -94,18 +94,13 @@ const rgba = z
 
 export const color = z.union([hex, hsl, hsla, named, rgb, rgba]);
 
-const pixel = z.custom<`${number}px`>((val) => regex.pixel.test(val as string)).transform((val) => ({ value: parseFloat(val.replace('px', '')), unit: 'px' }));
+const pixel = z.custom<`${number}px`>((val) => regex.pixel.test(val as string)).transform((val) => ({ raw: val, value: parseFloat(val.replace('px', '')), unit: 'px' }));
 
 type pixel = z.infer<typeof pixel>;
 
-const point = z.custom<`${number}pt`>((val) => regex.point.test(val as string)).transform((val) => ({ value: parseFloat(val.replace('pt', '')), unit: 'pt' }));
+const point = z.custom<`${number}pt`>((val) => regex.point.test(val as string)).transform((val) => ({ raw: val, value: parseFloat(val.replace('pt', '')), unit: 'pt' }));
 
 type point = z.infer<typeof point>;
-
-const sizeObject = z.object({
-	value: z.number(),
-	unit: z.string()
-});
 
 export const size = z.union([pixel, point]);
 
