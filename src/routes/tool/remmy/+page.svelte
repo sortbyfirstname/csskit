@@ -1,6 +1,7 @@
 <script lang="ts">
 	import CodeWindow from '$lib/components/CodeWindow.svelte';
 	import Divider from '$lib/components/Divider.svelte';
+	import FileDownload from '$lib/components/FileDownload.svelte';
 	import StylesheetInput from '$lib/components/StylesheetInput.svelte';
 	import { decimal } from '$lib/utils/converters';
 	import { getSizes, replaceSizes } from '$lib/utils/transformers';
@@ -10,20 +11,6 @@
 	let rem: number = 16;
 	let preview = false;
 	let remOptions = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
-
-	const handleDownload = (filename: string, content: string) => {
-		const link = document.createElement('a');
-
-		link.setAttribute('href', 'data:stylesheet/css;charset=utf-8,' + encodeURIComponent(content));
-		link.setAttribute('download', filename || 'data.json');
-		link.style.display = 'none';
-
-		document.body.appendChild(link);
-
-		link.click();
-
-		document.body.removeChild(link);
-	};
 </script>
 
 <svelte:head>
@@ -92,9 +79,7 @@
 							<br />
 						{:else}
 							<div class="flex justify-center items-center my-5">
-								<button class="btn btn-primary" on:click={() => handleDownload(stylesheet.name, output)}>
-									Download {stylesheet.name}
-								</button>
+								<FileDownload name={stylesheet.name} data={output} />
 							</div>
 						{/if}
 					{/await}
