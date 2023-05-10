@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="lofi">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/csskit-icon.svg" />
-		<meta name="viewport" content="width=device-width" />
-        <script defer src="/_vercel/insights/script.js"></script>
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%sveltekit.assets%/csskit-icon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <script defer src="/_vercel/insights/script.js"></script>
+    <!-- Primary Meta Tags -->
+    <title>CSSkit</title>
+    <meta name="title" content="CSSkit">
+    <meta name="description" content="Tools for CSS.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.csskit.dev/">
+    <meta property="og:title" content="CSSkit">
+    <meta property="og:description" content="Tools for CSS.">
+    <meta property="og:image" content="https://www.csskit.dev/meta.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.csskit.dev/">
+    <meta property="twitter:title" content="CSSkit">
+    <meta property="twitter:description" content="Tools for CSS.">
+    <meta property="twitter:image" content="https://www.csskit.dev/meta.png">
+    %sveltekit.head%
+</head>
+
+<body data-sveltekit-preload-data="hover">
+    <div style="display: contents">%sveltekit.body%</div>
+</body>
+
 </html>
