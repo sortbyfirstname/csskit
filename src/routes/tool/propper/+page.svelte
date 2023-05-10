@@ -10,7 +10,7 @@
 	<title>Propper | CSSkit</title>
 </svelte:head>
 
-<div class="z-10 min-h-screen w-full flex flex-row justify-between place-items-center p-20">
+<div class="z-0 h-full w-full flex flex-row justify-between place-items-center p-20">
 	<div class="h-3/4 w-1/3 card bg-base-300 place-items-center place-content-center space-y-4 p-10">
 		<StylesheetInput bind:stylesheets />
 	</div>
