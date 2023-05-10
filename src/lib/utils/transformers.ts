@@ -12,8 +12,6 @@ export const getColors = (stylesheets: Stylesheet[]): Converted<string>[] =>
 		.filter((val, i, arr) => arr.findIndex((val2) => val2.converted === val.converted) === i)
 		.sort((a, b) => (a.converted < b.converted ? -1 : 1));
 
-// 1rem = 16px = 12pt
-// 1px = 0.75pt
 export const getSizes = (stylesheets: Stylesheet[], rem: number): Converted<Size>[] =>
 	stylesheets
 		.flatMap((s) => s.content.rules.flatMap((r) => r.attributes.flatMap((a) => a.value)))
@@ -28,7 +26,11 @@ export const getSizes = (stylesheets: Stylesheet[], rem: number): Converted<Size
 		);
 
 export const replaceSizes = (stylesheet: string, sizes: Converted<Size>[]) => {
-	let sortedSizes = sizes.sort((a, b) => (a.original.value % 1 != 0 ? -1 : b.original.value - a.original.value));
+	let sortedSizes = sizes
+		.filter((val, i, arr) => arr.findIndex((val2) => JSON.stringify(val2.original) === JSON.stringify(val.original)) === i)
+		.sort((a, b) => (a.original.value % 1 != 0 ? -1 : b.original.value % 1 != 0 ? 1 : b.original.value - a.original.value));
+
 	let findr = sortedSizes.map((size) => ({ find: `${size.original.value}${size.original.unit}`, replace: `${size.converted.value}${size.converted.unit}` }));
+
 	return replaceMany(stylesheet, findr);
 };

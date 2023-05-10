@@ -27,9 +27,6 @@
 				<div class="chat chat-start">
 					<div class="chat-bubble w-52">Remmy is a tool to convert pixel and point values to rem values, to aid in the quest for responsiveness 👍</div>
 				</div>
-				<div class="chat chat-start">
-					<div class="chat-bubble w-52">This is very much in beta, so please proceed with caution ⚠️</div>
-				</div>
 				<div class="chat chat-end">
 					<div class="chat-bubble w-52">Upload your CSS files to get started.</div>
 				</div>

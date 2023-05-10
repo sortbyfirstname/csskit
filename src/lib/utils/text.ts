@@ -3,8 +3,8 @@ export const regex = {
 	byEmptyLines: /\n\s*\n/,
 	byLine: /\r?\n|\r|\n/g,
 	hex: /^#(?:[0-9a-fA-F]{2}){3,4}$/,
-	pixel: /\d*\.?\d*px/,
-	point: /\d*\.?\d*pt/,
+	pixel: /(?<!["'\(])\d\.?\d*px(?!["'\)])/,
+	point: /(?<!["'\(])\d\.?\d*pt(?!["'\)])/,
 	semicolon: /;(?!.*[)"])/
 };
 
@@ -12,7 +12,7 @@ export const appendIfNone = (str: string, append: string) => `${str.endsWith(app
 
 export const replaceMany = (str: string, findr: { find: string; replace: string }[]) => {
 	var replaceString = str;
-	findr.forEach((a, i) => {
+	findr.forEach((a) => {
 		replaceString = replaceString.replaceAll(a.find, a.replace);
 	});
 	return replaceString;
