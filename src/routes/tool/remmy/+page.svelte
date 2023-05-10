@@ -30,7 +30,7 @@
 	<title>Remmy | CSSkit</title>
 </svelte:head>
 
-<div class="z-10 h-full w-full flex flex-col lg:flex-row space-y-4 lg:space-y-0 px-10 py-16 sm:p-20">
+<div class="z-10 min-h-screen w-full flex flex-col lg:flex-row space-y-4 lg:space-y-0 px-10 py-16 sm:p-20">
 	<div class="card h-fit flex flex-col items-center bg-base-300 space-y-4 p-5 md:px-7 lg:px-10">
 		<div class="flex flex-col items-center space-y-3">
 			<div class="flex justify-center">
@@ -63,7 +63,7 @@
 
 	<Divider />
 
-	<div class="w-full lg:w-1/3 flex-grow flex flex-col justify-between space-y-5">
+	<div class="w-full lg:w-1/3 max-h-60 lg:max-h-none flex flex-col justify-between space-y-5">
 		<CodeWindow title="Conversions">
 			{#if stylesheets}
 				{#each getSizes(stylesheets, rem) as size}
@@ -75,7 +75,7 @@
 
 	<Divider />
 
-	<div class="w-full lg:w-1/3 flex-grow flex flex-col justify-between space-y-5">
+	<div class="w-full lg:w-1/3 flex-grow flex flex-col justify-between space-y-5 mb-10 lg:mb-0">
 		<CodeWindow title={preview ? 'Output' : ''}>
 			<div class="absolute top-3 right-5 flex flex-row space-x-2 items-center">
 				<label for="preview-toggle" class="label-text">Preview</label>
