@@ -1,14 +1,5 @@
 import { z } from 'zod';
-import {
-	regex,
-	remove,
-	removeAll,
-	splitByEmptyLines,
-	splitInclusiveRegex,
-	textAfter,
-	textBefore,
-	textBeforeLast
-} from './text';
+import { regex, remove, removeAll, splitByEmptyLines, splitInclusiveRegex, textAfter, textBefore, textBeforeLast } from './text';
 import { namedColors } from './values/named-colors';
 
 const hex = z.string().trim().toLowerCase().regex(regex.hex);
@@ -17,20 +8,11 @@ const hslDeclaration = z.string().trim().toLowerCase().startsWith('hsl(').endsWi
 
 const hslaDeclaration = z.string().trim().toLowerCase().startsWith('hsla(').endsWith(')');
 
-const hue = z.coerce
-	.number()
-	.min(0, { message: 'Hue must be greater than 0' })
-	.max(360, { message: 'Hue must be less than 360' });
+const hue = z.coerce.number().min(0, { message: 'Hue must be greater than 0' }).max(360, { message: 'Hue must be less than 360' });
 
-const percentage = z.coerce
-	.number()
-	.min(0, { message: 'Percentage must be greater than 0%' })
-	.max(100, { message: 'Percentage must be less than 100%' });
+const percentage = z.coerce.number().min(0, { message: 'Percentage must be greater than 0%' }).max(100, { message: 'Percentage must be less than 100%' });
 
-const alpha = z.coerce
-	.number()
-	.min(0, { message: 'Alpha channel value must be greater than 0' })
-	.max(1, { message: 'Alpha channel value must be less than 1' });
+const alpha = z.coerce.number().min(0, { message: 'Alpha channel value must be greater than 0' }).max(1, { message: 'Alpha channel value must be less than 1' });
 
 const hslValues = z.object({
 	hue: hue,
@@ -66,16 +48,17 @@ const hsla = z
 	.pipe(hslaValues)
 	.transform((hsla) => `hsla(${hsla.hue}, ${hsla.saturation}%, ${hsla.lightness}%, ${hsla.alpha})`);
 
-const named = z.string().trim().toLowerCase().refine(val => namedColors.includes(val));
+const named = z
+	.string()
+	.trim()
+	.toLowerCase()
+	.refine((val) => namedColors.includes(val));
 
 const rgbDeclaration = z.string().trim().toLowerCase().startsWith('rgb(').endsWith(')');
 
 const rgbaDeclaration = z.string().trim().toLowerCase().startsWith('rgba(').endsWith(')');
 
-const rgbChannel = z.coerce
-	.number()
-	.min(0, { message: 'RGB channel value must be greater than 0' })
-	.max(255, { message: 'RGB channel value must be less than 255' });
+const rgbChannel = z.coerce.number().min(0, { message: 'RGB channel value must be greater than 0' }).max(255, { message: 'RGB channel value must be less than 255' });
 
 const rgbValues = z.object({
 	red: rgbChannel,
@@ -110,6 +93,21 @@ const rgba = z
 	.transform((rgba) => `rgba(${rgba.red}, ${rgba.green}, ${rgba.blue}, ${rgba.alpha})`);
 
 export const color = z.union([hex, hsl, hsla, named, rgb, rgba]);
+
+const pixel = z.custom<`${number}px`>((val) => regex.pixel.test(val as string)).transform((val) => ({ value: parseInt(val.replace('px', '')), unit: 'px' }));
+
+type pixel = z.infer<typeof pixel>;
+
+const point = z.custom<`${number}pt`>((val) => regex.point.test(val as string)).transform((val) => ({ value: parseInt(val.replace('pt', '')), unit: 'pt' }));
+
+type point = z.infer<typeof point>;
+
+const sizeObject = z.object({
+	value: z.number(),
+	unit: z.string()
+});
+
+export const size = z.union([pixel, point]);
 
 const attributeObject = z.object({
 	name: z.string(),
@@ -154,5 +152,6 @@ const stylesheetContent = z.string().transform((val) => ({ rules: rules.parse(va
 
 export const stylesheet = z.object({
 	name: z.string().endsWith('.css', { message: 'Only CSS files are supported' }),
-	content: stylesheetContent
+	content: stylesheetContent,
+	raw: z.string()
 });

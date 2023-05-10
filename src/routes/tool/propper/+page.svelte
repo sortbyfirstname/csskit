@@ -24,8 +24,7 @@
 					{#each stylesheet.content.rules as rule}
 						<pre><code class="text-purple-600">{rule.selector}</code></pre>
 						{#each rule.attributes as attribute}
-							<pre>&#9;<code class="text-cyan-500">{attribute.name}</code>: <code class="text-amber-500"
-									>{attribute.value}</code></pre>
+							<pre>&#9;<code class="text-cyan-500">{attribute.name}</code>: <code class="text-amber-500">{attribute.value}</code></pre>
 						{/each}
 					{/each}
 				{/each}

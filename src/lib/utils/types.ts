@@ -1,3 +1,13 @@
+export type Converted<T> = {
+	original: T;
+	converted: T;
+};
+
+export type Size = {
+	value: number;
+	unit: string;
+};
+
 export type Attribute = {
 	name: string;
 	value: string | string[];
@@ -16,4 +26,5 @@ export type StylesheetContent = {
 export type Stylesheet = {
 	name: string;
 	content: StylesheetContent;
+	raw: string;
 };

@@ -36,7 +36,7 @@
 			{#if stylesheets}
 				{#each stylesheets as stylesheet}
 					{#each stylesheet.content.comments as comment}
-						<pre><code>{comment}</code></pre>
+						<pre class="before:!mr-0"><code>{comment}</code></pre>
 					{/each}
 				{/each}
 				{#if stylesheets.reduce((a, b) => a + b.content.comments.length, 0) > 0}
