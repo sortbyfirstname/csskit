@@ -18,7 +18,7 @@ CSSKit is a toolbox for stylesheets. The purpose of this is to provide ways to g
     </picture>
 </p>
 
-## [Beta] Rainbow
+## Rainbow
 
 Rainbow takes all the colours (Hex, RGB and HSL) from your uploaded stylesheets and present them as dots on the screen. This is useful to visualise your "colour stack" and have an easy way to share it with interested parties.
 
@@ -35,6 +35,20 @@ Rainbow takes all the colours (Hex, RGB and HSL) from your uploaded stylesheets 
 ## CoCo - Contextless Comments
 
 CoCo is a very simple tool the extracts and displays all comments found in your stylesheets, with a total count. The comments are displayed without any context in regards to where they are in the stylesheet, hence the name. This tool was only created as a side effect of creating the comment parser really, but hey, someone may find it useful.
+
+<br/>
+
+<p align="center" >
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="static/remmy-white.svg">
+        <source media="(prefers-color-scheme: light)" srcset="static/remmy.svg">
+        <img alt="CSSkit logo" src="static/remmy.svg" height="50">
+    </picture>
+</p>
+
+## [Beta] Remmy
+
+Remmy is a tool that converts the pixel and point values found in your stylesheets to rem values, and returns you a downloadable converted stylesheet. This is useful if you are aiming to start introducing responsiveness into a legacy app, as incrementally introducing responsiveness with rem values when amongst pixel and point values can cause more harm than good.
 
 ## [Coming soon] Propper
 
