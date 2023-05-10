@@ -28,8 +28,7 @@ export const getSizes = (stylesheets: Stylesheet[], rem: number): Converted<Size
 		);
 
 export const replaceSizes = (stylesheet: string, sizes: Converted<Size>[]) => {
-	let find = sizes.map((size) => `${size.original.value}${size.original.unit}`);
-	let replace = sizes.map((size) => `${size.converted.value}${size.converted.unit}`);
-
-	return replaceMany(stylesheet, find, replace);
+	let sortedSizes = sizes.sort((a, b) => (a.original.value % 1 != 0 ? -1 : b.original.value - a.original.value));
+	let findr = sortedSizes.map((size) => ({ find: `${size.original.value}${size.original.unit}`, replace: `${size.converted.value}${size.converted.unit}` }));
+	return replaceMany(stylesheet, findr);
 };

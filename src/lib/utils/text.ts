@@ -10,10 +10,10 @@ export const regex = {
 
 export const appendIfNone = (str: string, append: string) => `${str.endsWith(append) ? str : str + append}`;
 
-export const replaceMany = (str: string, find: string[], replace: string[]) => {
+export const replaceMany = (str: string, findr: { find: string; replace: string }[]) => {
 	var replaceString = str;
-	find.forEach((f, i) => {
-		replaceString = replaceString.replaceAll(f, replace[i]);
+	findr.forEach((a, i) => {
+		replaceString = replaceString.replaceAll(a.find, a.replace);
 	});
 	return replaceString;
 };
