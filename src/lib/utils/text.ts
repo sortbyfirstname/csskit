@@ -3,8 +3,8 @@ export const regex = {
 	byEmptyLines: /\n\s*\n/,
 	byLine: /\r?\n|\r|\n/g,
 	hex: /^#(?:[0-9a-fA-F]{2}){3,4}$/,
-	pixel: /(?<!["'\(])\d+\.?\d*px(?!["'\)])/,
-	point: /(?<!["'\(])\d+\.?\d*pt(?!["'\)])/,
+	pixel: /(?<!["'\(])\d+\.?\d*px(?!.*["'\)])/,
+	point: /(?<!["'\(])\d+\.?\d*pt(?!.*["'\)])/,
 	semicolon: /;(?!.*[)"])/
 };
 

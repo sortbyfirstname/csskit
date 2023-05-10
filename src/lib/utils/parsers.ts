@@ -112,6 +112,7 @@ const attributeObject = z.object({
 const attributeValue = z
 	.string()
 	.transform((val) => textBeforeLast(textAfter(val, ':'), ';').trim())
+	.transform((val) => val.replaceAll('( ', '').replaceAll(', ', '').replaceAll(' )', ''))
 	.transform((val) => val.split(' '));
 
 const attribute = z
