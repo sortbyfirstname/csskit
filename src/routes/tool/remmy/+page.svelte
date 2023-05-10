@@ -63,7 +63,7 @@
 
 	<Divider />
 
-	<div class="w-full lg:w-1/3 flex-grow flex flex-col justify-between space-y-5">
+	<div class="w-full lg:w-1/3 max-h-60 lg:max-h-none flex-grow flex flex-col justify-between space-y-5">
 		<CodeWindow title="Conversions">
 			{#if stylesheets}
 				{#each getSizes(stylesheets, rem) as size}
