@@ -51,7 +51,7 @@
 		<CodeWindow title="Conversions">
 			{#if stylesheets}
 				{#each getSizes(stylesheets, rem) as size}
-					<pre>{size.original.value}{size.original.unit} -> {size.converted.value}{size.converted.unit}</pre>
+					<pre>{size.original.value}{size.original.unit} -> {size.converted.raw}</pre>
 				{/each}
 			{/if}
 		</CodeWindow>
