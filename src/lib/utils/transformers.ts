@@ -30,7 +30,7 @@ export const replaceSizes = (stylesheet: string, sizes: Converted<Size>[]) => {
 		.filter((val, i, arr) => arr.findIndex((val2) => JSON.stringify(val2.original) === JSON.stringify(val.original)) === i)
 		.sort((a, b) => (a.original.value % 1 != 0 ? -1 : b.original.value % 1 != 0 ? 1 : b.original.value - a.original.value));
 
-	let findr = sortedSizes.map((size) => ({ find: `${size.original.value}${size.original.unit}`, replace: `${size.converted.value}${size.converted.unit}` }));
+	let findr = sortedSizes.map((size) => ({ find: size.original.raw, replace: size.converted.raw }));
 
 	return replaceMany(stylesheet, findr);
 };
