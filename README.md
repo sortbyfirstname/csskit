@@ -40,21 +40,43 @@ CoCo is a very simple tool the extracts and displays all comments found in your 
 
 <p align="center" >
     <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="static/nanonow-white.svg">
+        <source media="(prefers-color-scheme: light)" srcset="static/nanonow.svg">
+        <img alt="CSSkit logo" src="static/nanonow.svg" height="50">
+    </picture>
+</p>
+
+## nanonow
+
+nanonow (na▪no▪now) is a simple, pre-configured, portable way to minify your CSS. The tool uses postcss + cssnano to perform the minification, using preset configuration provided by cssnano.
+
+<br/>
+
+<p align="center" >
+    <picture>
         <source media="(prefers-color-scheme: dark)" srcset="static/remmy-white.svg">
         <source media="(prefers-color-scheme: light)" srcset="static/remmy.svg">
         <img alt="CSSkit logo" src="static/remmy.svg" height="50">
     </picture>
 </p>
 
-## [Beta] Remmy
+## Remmy
 
 Remmy is a tool that converts the pixel and point values found in your stylesheets to rem values, and returns you a downloadable converted stylesheet. This is useful if you are aiming to start introducing responsiveness into a legacy app, as incrementally introducing responsiveness with rem values when amongst pixel and point values can cause more harm than good.
+
+<br />
+
+---
+
+<br />
 
 ## [Coming soon] Propper
 
 Propper will be able to replace all the colours found in your CSS with custom properties (aka CSS variables), present you with an editable list of the custom properties, and then allow you to download your CSS with the replaced custom properties and your new stylesheet containing your custom properties.
 
 This is to provide an easy way to manage colours across a large number of stylesheets, and extend how you need to going.
+
+<br />
 
 ---
 
@@ -110,7 +132,10 @@ This is to provide an easy way to manage colours across a large number of styles
     </a>
 </p>
 
-This project also uses [ColorTranslator](https://github.com/elchininet/ColorTranslator) to convert parsed colours to HSL for effective deduping.
+This project also uses:
+- [ColorTranslator](https://github.com/elchininet/ColorTranslator) to convert parsed colours to HSL for effective deduping
+- [cssnano](https://github.com/cssnano/cssnano) to perform CSS minification in the nanonow tool
+- [PostCSS](https://github.com/postcss/postcss) for the app itself as well as running the minification as a plugin in the nanonow tool
 
 ---
 
