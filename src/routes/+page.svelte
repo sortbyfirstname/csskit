@@ -16,7 +16,7 @@
 	</div>
 
 	<div class="tooltip" data-tip="minify your css">
-		<button class="btn btn-primary btn-lg" on:click={() => goto('/tool/nanonow')}>na▪no▪now</button>
+		<button class="btn btn-primary btn-lg" on:click={() => goto('/tool/nanonow')}>nanonow</button>
 	</div>
 
 	<div class="relative tooltip select-none" data-tip="wrap your colours in custom properties">
