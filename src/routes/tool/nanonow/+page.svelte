@@ -22,7 +22,7 @@
 </script>
 
 <TemporaryAlert bind:alert>
-	<Animation src="/lottie/copy-white.json" class="h-6 w-6" loop autoplay />
+	<Animation src="/lottie/copy-white.json" class="h-6 w-6" autoplay loop />
 	<span class="!mt-0">Copied to clipboard</span>
 </TemporaryAlert>
 
