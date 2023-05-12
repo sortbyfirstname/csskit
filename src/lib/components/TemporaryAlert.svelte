@@ -7,7 +7,7 @@
 
 {#if alert}
 	<div
-		transition:fly={{ duration: 1800, easing: elasticInOut, y: '-4rem' }}
+		transition:fly={{ duration: 1800, easing: elasticInOut, y: '-8rem' }}
 		class="z-50 absolute top-3 toast-center w-fit alert !bg-accent text-accent-content drop-shadow-lg flex flex-row justify-center items-center">
 		<slot />
 	</div>
