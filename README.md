@@ -48,7 +48,7 @@ CoCo is a very simple tool the extracts and displays all comments found in your 
 
 ## nanonow
 
-nanonow (na▪no▪now) is a simple, pre-configured, portable way to minify your CSS. The tool uses postcss + cssnano to perform the minification, using preset configuration provided by cssnano.
+nanonow is a simple, pre-configured, portable way to minify your CSS. The tool uses postcss + cssnano to perform the minification, using preset configuration provided by cssnano.
 
 <br/>
 
