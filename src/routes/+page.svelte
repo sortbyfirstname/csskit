@@ -15,7 +15,7 @@
 		<button class="btn btn-primary btn-lg" on:click={() => goto('/tool/coco')}>CoCo</button>
 	</div>
 
-    <div class="tooltip" data-tip="minify your css">
+	<div class="tooltip" data-tip="minify your css">
 		<button class="btn btn-primary btn-lg" on:click={() => goto('/tool/nanonow')}>na▪no▪now</button>
 	</div>
 
