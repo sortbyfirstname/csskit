@@ -16,8 +16,7 @@
 		"@sveltejs/kit": "^1.5.0",
 		"autoprefixer": "^10.4.14",
 		"colortranslator": "^1.10.2",
-		"daisyui": "^2.51.5",
-		"postcss": "^8.4.22",
+		"daisyui": "^2.51.5",	
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
 		"svelte": "^3.54.0",
@@ -30,6 +29,9 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@vercel/analytics": "^1.0.0"
+		"@vercel/analytics": "^1.0.0",
+        "cssnano": "^6.0.1",
+        "cssnano-preset-default": "^6.0.1",
+        "postcss": "^8.4.22"
 	}
 }

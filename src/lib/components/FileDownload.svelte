@@ -13,4 +13,9 @@
 	};
 </script>
 
-<button class="btn btn-primary" on:click={() => handleDownload(name, data)}>Download {name}</button>
+<button class={!$$slots.custom ? 'btn btn-primary' : ''} on:click={() => handleDownload(name, data)}>
+	<slot name="custom" />
+	{#if !$$slots.custom}
+		Download {name}
+	{/if}
+</button>
